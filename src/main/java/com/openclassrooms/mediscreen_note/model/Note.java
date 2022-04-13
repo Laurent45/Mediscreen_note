@@ -1,6 +1,7 @@
 package com.openclassrooms.mediscreen_note.model;
 
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -14,6 +15,7 @@ import java.util.Objects;
 public class Note {
 
     @Id
+    @ApiModelProperty(hidden = true)
     private String id;
     @Field("practitioner_name")
     private String practitionerName;
